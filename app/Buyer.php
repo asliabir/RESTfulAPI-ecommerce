@@ -6,6 +6,6 @@ use App\Transaction;
 class Buyer extends User
 {
     public function transaction(){
-        return $this->hasMany(Transaction::class)
+        return $this->hasMany(Transaction::class);
     }
 }
