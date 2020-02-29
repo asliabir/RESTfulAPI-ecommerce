@@ -27,11 +27,3 @@ $factory->define(User::class, function (Faker\Generator $faker) {
         'admin' => $faker->randomElement([User::ADMIN_USER, User::REGULAR_USER]),
     ];
 });
-
-$factory->define(Category::class, function (Faker\Generator $faker) {
-
-    return [
-        'name' => $faker->word,
-        'description' => $faker->paragraph(1),
-    ];
-});
