@@ -46,9 +46,8 @@ class UserController extends Controller{
     public function update(Request $request, $id){
         $user = User::findOrFail($id);
         $rules = [
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'email' => 'email|unique:users',
+            'password' => 'min:6|confirmed',
         ];
     }
 
