@@ -18,6 +18,8 @@ alias nrw="npm run watch"
 alias nrwp="npm run watch-poll"
 alias nrh="npm run hot"
 alias nrp="npm run production"
+alias vgru="vagrant up && vagrant provision"
+alias su="vagrant ssh"
 
 alias yrd="yarn run dev"
 alias yrw="yarn run watch"
