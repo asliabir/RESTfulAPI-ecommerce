@@ -14,7 +14,6 @@ class UserController extends Controller{
         return response()->json(['data' => $users], 200);
     }
 
-
     public function store(Request $request){
         $rules = [
             'name' => 'required',
