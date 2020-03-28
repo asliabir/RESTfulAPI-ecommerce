@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Seller;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 use App\Seller;
 
-class SellerController extends Controller
+class SellerController extends ApiController
 {
     public function index()
     {
@@ -17,7 +17,7 @@ class SellerController extends Controller
     
     public function show($id){
         $seller = Seller::has('products')->findOrFail($id);
-        return response()->json(['data' => $seller], 200);
+        return response()->json(['data' => $sellerApiController], 200);
     }
 
    
