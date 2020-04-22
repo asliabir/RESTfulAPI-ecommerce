@@ -55,6 +55,9 @@ class Handler extends ExceptionHandler
             $modalName = strtolower(class_basename($exception->getModel()));
             return $this->errorResponse("Does not exists any {$modalName} with the specified identificator",404);
         }
+        if($exception instanceof AuthenticationException){
+            return $this->unauthenticated($request, $exception);
+        }
         return parent::render($request, $exception);
     }
 
@@ -67,11 +70,7 @@ class Handler extends ExceptionHandler
      */
     protected function unauthenticated($request, AuthenticationException $exception)
     {
-        if ($request->expectsJson()) {
-            return response()->json(['error' => 'Unauthenticated.'], 401);
-        }
-
-        return redirect()->guest(route('login'));
+        return $this->errorResponse("Unauthenticated", 401);
     }
 
     protected function convertValidationExceptionToResponse(ValidationException $e, $request)
