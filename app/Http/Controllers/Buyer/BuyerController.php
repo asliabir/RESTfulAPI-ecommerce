@@ -12,8 +12,8 @@ class BuyerController extends ApiController
         return $this->showAll($buyers);
     }
 
-    public function show($id){
-        $buyer = Buyer::has('transaction')->findOrFail($id);
+    public function show(Buyer $buyer){
+        // $buyer = Buyer::has('transaction')->findOrFail($id);
         return $this->showOne($buyer);
     }
 
