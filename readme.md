@@ -13,7 +13,7 @@
 13-implementing-the-operations-for-seller/ +Done
 14-improving-the-current-restful-api-operations/ +Done
 15-handling-errors-and-exceptions-with-the-laravel-handler/ +Done
-16-implicit-model-binding-with-routes-and-methods/
+16-implicit-model-binding-with-routes-and-methods/ +Done
 17-implementing-soft-deleting-for-all-the-models/
 18-implementing-the-operations-for-category/
 19-implementing-the-operations-for-product/
